@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+       
+    </head>
+    <body>
+       <div class="container">
+        <h1>Dashboard</h1>
+        <input type="text" placeholder="Name" id="txtName" >
+        <input type="text" placeholder="Age" id="txtAge">
+        <select id="txtGender">
+          <option value="" disabled selected>Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+      </select>
+        <button type="button" class="btn btn-success" style="padding: .2px; margin: 10px;" id="btnAddEle" onclick="addNewItem()">
+            Add
+        </button>
+
+        <table class="table table-dark" id ="myTable">
+            <thead>
+             <th>S.No</th>
+             <th>Name</th>
+             <th>Age</th>
+             <th>Gender</th>
+            </thead>
+            <tbody class="tbody">
+
+            </tbody>
+
+        </table>
+
+       </div>
+       <div class="modal fade"  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Updatde</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label> Name :</label>
+              <input type="text" id="NameMod"><br>
+              <label> Age :</label>
+              <input type="text" id="AgeMod"><br>
+              <label> Gender :</label>
+              <select id="GenderMod">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="updData()">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+       
+    </body>
+    <script src="./assets/js/scripts.js"></script>
+</html>
